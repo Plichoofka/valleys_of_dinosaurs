@@ -1,0 +1,16 @@
+<!-- partial view - can be used in different files;  -->
+<!-- name needs to start with an underscore -->
+<%= form_for @dinosaur do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :age %>
+  <%= f.number_field :age %>
+
+  <%= f.label :image_url %>
+  <%= f.text_field :image_url %>
+
+  <%= f.submit (@dinosaur.new_record? ? "Create" : "Update") %>
+
+<% end %>
