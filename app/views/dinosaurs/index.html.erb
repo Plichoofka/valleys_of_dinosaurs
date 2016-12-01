@@ -1,5 +1,13 @@
-<h1>Dinosaurs</h1>
+<!-- view for the main site - not needed after we made a loop with links -->
+<!-- <h1>Dinosaurs</h1>
 
 <% @dinosaurs.each do |dinosaur| %>
   <p><%= dinosaur.name %></p>
+<% end %> -->
+
+<!-- links dinosaurs on the main page to their show page -->
+<% @dinosaurs.each do |dinosaur| %>
+    <p><%= link_to dinosaur.name, dinosaur_path(dinosaur.id) %></p>
 <% end %>
+
+<%= link_to "[New Dinosaur]", new_dinosaur_path %>
